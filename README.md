@@ -46,17 +46,22 @@ This project simulates a **real-world SOC environment** and showcases hands-on b
 ```bash
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 sudo bash wazuh-install.sh -a
+```
 After installation, access the dashboard:
-
+```bash
 https://<WAZUH_MANAGER_IP>
+```
 🖥️ Agent Installation & Configuration
 🔹 Linux Agent
+```bash
 curl -sO https://packages.wazuh.com/4.x/wazuh-agent.sh
 sudo bash wazuh-agent.sh
+```
 Start agent service:
-
+```bash
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
+```
 🔹 Windows Agent
 Download Wazuh Agent for Windows
 
@@ -70,22 +75,28 @@ Start the agent service:
 
 Services → Wazuh Agent → Start
 🔹 macOS Agent
+```bash
 curl -so wazuh-agent.pkg https://packages.wazuh.com/4.x/macos/wazuh-agent-4.x.pkg
 sudo installer -pkg wazuh-agent.pkg -target /
+```
 Start agent:
-
+```bash
 sudo /Library/Ossec/bin/wazuh-control start
+```
 📂 File Integrity Monitoring (Monitoring a Specific Path)
 🔹 Linux Example (/var/www/html)
 Edit agent configuration:
-
+```bash
 sudo nano /var/ossec/etc/ossec.conf
+```
 <syscheck>
   <directories check_all="yes" realtime="yes">/var/www/html</directories>
 </syscheck>
-Restart agent:
 
+Restart agent:
+```bash
 sudo systemctl restart wazuh-agent
+```
 🔹 Windows Example (C:\SensitiveData)
 <syscheck>
   <directories check_all="yes" realtime="yes">C:\SensitiveData</directories>
