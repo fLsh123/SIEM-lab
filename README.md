@@ -89,22 +89,27 @@ Edit agent configuration:
 ```bash
 sudo nano /var/ossec/etc/ossec.conf
 ```
+```bash
 <syscheck>
   <directories check_all="yes" realtime="yes">/var/www/html</directories>
 </syscheck>
-
+```
 Restart agent:
 ```bash
 sudo systemctl restart wazuh-agent
 ```
 🔹 Windows Example (C:\SensitiveData)
+```bash
 <syscheck>
   <directories check_all="yes" realtime="yes">C:\SensitiveData</directories>
 </syscheck>
+```
 🔹 macOS Example (/Users/emmanuel/Documents)
+```bash
 <syscheck>
   <directories check_all="yes" realtime="yes">/Users/emmanuel/Documents</directories>
 </syscheck>
+```
 🔔 Alert Testing
 Trigger alerts by creating or modifying files:
 
