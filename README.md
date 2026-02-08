@@ -55,11 +55,13 @@ https://<WAZUH_MANAGER_IP>
 🔹 Linux Agent
 ```bash
 curl -sO https://packages.wazuh.com/4.x/wazuh-agent.sh
+
 sudo bash wazuh-agent.sh
 ```
 Start agent service:
 ```bash
 sudo systemctl enable wazuh-agent
+
 sudo systemctl start wazuh-agent
 ```
 🔹 Windows Agent
@@ -77,6 +79,7 @@ Services → Wazuh Agent → Start
 🔹 macOS Agent
 ```bash
 curl -so wazuh-agent.pkg https://packages.wazuh.com/4.x/macos/wazuh-agent-4.x.pkg
+
 sudo installer -pkg wazuh-agent.pkg -target /
 ```
 Start agent:
